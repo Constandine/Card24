@@ -1,0 +1,209 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res/com.example.card24"
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+    tools:context="com.example.card24.GamePage" 
+    android:background="#EFEAE1">
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/bar_classic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/bar_classic"
+                android:adjustViewBounds="true"
+                />
+
+            <ImageView
+                android:id="@+id/backtomain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="30dp"
+                android:src="@drawable/backtomain" />
+
+        </RelativeLayout>
+    </TableRow>
+        
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:background="#EFEAE1"
+            > 
+            
+            <EditText
+                android:id="@+id/txtFormula"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_above="@+id/txtResult"
+                android:layout_alignParentRight="true" 
+                android:textSize = "40sp"  
+                android:layout_marginRight="50dp"
+                android:gravity="right"
+                android:editable="false"
+                android:background="#EFEAE1"
+                
+                />
+ 
+           <EditText
+               android:id="@+id/txtResult"
+               android:layout_width="wrap_content"
+               android:layout_height="50dp"
+               android:layout_alignParentBottom="true"
+               android:layout_alignParentRight="true"
+               android:layout_marginRight="20dp"
+               android:editable="false"
+               android:textSize = "40sp"
+               android:background="#EFEAE1"
+               android:gravity="right" />
+           </RelativeLayout>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            >
+            
+            <ImageView
+                android:id="@+id/btnNewGame"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/restart"
+                android:layout_margin="5dp"
+             /> 
+
+            <ImageView
+                android:id="@+id/btnClear"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/btnNewGame"
+                android:src="@drawable/clear" 
+                android:layout_margin="5dp"
+             /> 
+             <ImageView
+                android:id="@+id/btnBackspace"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/btnClear"
+                android:src="@drawable/backspace"
+                android:layout_margin="5dp"
+             />
+            <ImageView
+                android:id="@+id/imageOpbrkt"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/btnBackspace"
+                android:src="@drawable/op" 
+                android:layout_margin="5dp"
+                />
+
+            <ImageView
+                android:id="@+id/imageClbrkt"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/imageOpbrkt"
+                android:src="@drawable/ed" 
+                android:layout_margin="5dp"/>
+             
+            <ImageView
+                android:id="@+id/imagePlus"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/imageClbrkt"
+                android:src="@drawable/plus" 
+                android:layout_margin="5dp"/>
+            
+            <ImageView
+                android:id="@+id/imageMinus"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/imagePlus"
+                android:layout_toRightOf="@+id/imageClbrkt"
+                android:src="@drawable/minus" 
+                android:layout_margin="5dp"/>
+
+            <ImageView
+                android:id="@+id/imageMultiply"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/imageMinus"
+                android:layout_toRightOf="@+id/imageClbrkt"
+                android:src="@drawable/multy" 
+                android:layout_margin="5dp"/>
+            
+            <ImageView
+                android:id="@+id/imageDivide"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/imageMultiply"
+                android:layout_toRightOf="@+id/imageClbrkt"
+                android:src="@drawable/divide" 
+                android:layout_margin="5dp"/>
+            
+            <ImageView
+                android:id="@+id/imageEqual"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageDivide"
+                android:layout_toRightOf="@+id/imageClbrkt" 
+                android:src="@drawable/equal" 
+                android:layout_margin="5dp"/>
+
+            <ImageView
+                 android:id="@+id/imageCard1"
+                 android:layout_width="140dp"
+                 android:layout_height="160dp"
+                 android:layout_below="@+id/imagePlus"
+                 android:src="@drawable/back"
+                 />
+
+            <ImageView
+                android:id="@+id/imageCard2"
+                android:layout_width="140dp"
+                android:layout_height="160dp"
+                android:layout_below="@+id/imagePlus"
+                android:layout_toRightOf="@+id/imageCard1"
+                android:src="@drawable/back" />
+
+            <ImageView
+                android:id="@+id/imageCard3"
+                android:layout_width="140dp"
+                android:layout_height="160dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/imageCard1"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/back"/>
+
+            <ImageView
+                android:id="@+id/imageCard4"
+                android:layout_width="140dp"
+                android:layout_height="160dp"
+                android:layout_below="@+id/imageCard2"
+                android:layout_toRightOf="@+id/imageCard3"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/back"
+                />
+        
+        </RelativeLayout>
+    </TableRow>
+
+</TableLayout>
